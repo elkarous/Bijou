@@ -5,11 +5,7 @@
     <div class="row align-self-center">
         <hr class="col-md-2 col-sm-4  black">
     </div>
-
-    <div  *ngFor="let item of articles">
-        <div class="column">
-                <app-item-component [item]="item"></app-item-component>
-           </div> 
-            
-    </div>
+    <mat-grid-list cols="3" rowHeight="1:1" >
+        <mat-grid-tile *ngFor="let item of articles"><app-item-component [item]="item"></app-item-component></mat-grid-tile>
+      </mat-grid-list>
 </div>
